@@ -1,0 +1,2 @@
+rootProject.name='Eshamber'
+include ':app'

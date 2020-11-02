@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.FarmDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/farm_details_collapsing_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Farm Title">
+
+            <!--
+            <ImageView
+                android:id="@+id/image_view_details_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+            -->
+
+            <com.elyeproj.loaderviewlibrary.LoaderImageView
+                android:id="@+id/image_view_details_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop" />
+
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:tint="@android:color/white"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end"
+
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:padding="10dp"
+                app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                        android:textColor="@android:color/black" />
+
+
+                    <TextView
+                        android:id="@+id/detail_farm_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:text="Poultry refers to birds such as chickens, turkeys, ducks, and geese farmed for the purpose of meat, and eggs. Chickens raised for eggs are called Layers while chickens raised for meat are called Broilers.\n
+Although, poultry may not directly be raised for manure, of all animal manure, poultry has the highest amount of nitrogen, phosphorus, and potassium and is used as an organic fertilizer, especially for soil low in nitrogen."
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:padding="10dp"
+                app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Investment Information"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/text_view_detail_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500000"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/text_view_amount_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_view_detail_amount"
+                            android:text="Amount"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:id="@+id/text_view_detail_roi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="214dp"
+                            android:layout_toEndOf="@+id/text_view_detail_amount"
+                            android:text="22"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/text_view_detail_roi_percentage_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/text_view_detail_roi"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="242dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toEndOf="@+id/text_view_detail_amount"
+                            android:text="%"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_view_detail_roi"
+                            android:layout_alignBottom="@+id/text_view_amount_label"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="239dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_toEndOf="@+id/text_view_amount_label"
+                            android:text="Roi"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:padding="10dp"
+                app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/text_view_payback_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500000"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/text_view__label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_view_payback_amount"
+                            android:text="Total payback"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/text_view_returns_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500000"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/text_view__returns_amount_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_view_returns_amount"
+                            android:text="Returns"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:padding="10dp"
+                app:cardCornerRadius="@dimen/cardview_default_radius">
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/card_view_detail_invest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corner_button_style"
+                android:text="Invest in this Farm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

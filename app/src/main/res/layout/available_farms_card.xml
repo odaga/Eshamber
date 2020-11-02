@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/card_farm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Farm Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="25dp" />
+
+
+        <TextView
+            android:id="@+id/card_farm_current_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_farm_title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1sp"
+            android:layout_marginRight="1dp"
+            android:text="UGX"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/card_farm_card_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_farm_title"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/card_farm_current_label"
+            android:layout_toRightOf="@+id/card_farm_current_label"
+            android:text="10000"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text_view_roi_percentage_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="%"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/text_view_card_roi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/text_view_roi_percentage_label"
+            android:layout_alignLeft="@+id/text_view_roi_percentage_label"
+            android:layout_alignBottom="@+id/text_view_roi_percentage_label"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-30dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="-7dp"
+            android:layout_toStartOf="@+id/text_view_roi_percentage_label"
+            android:layout_toLeftOf="@+id/text_view_roi_percentage_label"
+            android:text="10"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp" />
+
+
+        <TextView
+            android:id="@+id/text_farm_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_farm_card_amount"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="1dp"
+            android:text="Amount"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_farm_roi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_card_roi"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="31dp"
+            android:text="ROI"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_view_card_farm_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_below="@id/text_farm_amount_label"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/text_view_card_farm_duration_month_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_farm_amount_label"
+            android:layout_alignBottom="@+id/text_view_card_farm_duration"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/text_view_card_farm_duration"
+            android:layout_toRightOf="@+id/text_view_card_farm_duration"
+            android:text="Months"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_card_farm_duration"
+            android:layout_alignStart="@+id/text_view_card_farm_duration_month_label"
+            android:layout_alignLeft="@+id/text_view_card_farm_duration_month_label"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:text="Duration"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

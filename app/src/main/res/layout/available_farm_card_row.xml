@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.elyeproj.loaderviewlibrary.LoaderImageView
+            android:id="@+id/image_view_card_row_farm_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/text_view_card_row_farm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_card_row_farm_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Farm Title"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/text_view_card_row_farm_roi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_card_row_farm_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Farm ROI"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimary" />
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/text_view_card_row_farm_Amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_card_row_farm_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Amount: "
+            android:textColor="@android:color/black" />
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/text_view_card_row_farm_Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_card_row_farm_image"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/text_view_card_row_farm_Amount_label"
+            android:text="Amount"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
