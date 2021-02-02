@@ -63,7 +63,6 @@ public class AvailableFarmsActivity extends AppCompatActivity {
         availableFarmProgress = findViewById(R.id.available_farms_progress);
         availableFarmsLinearLayout = findViewById(R.id.available_farms_linear_layout);
 
-        //setUpRecyclerview();
         fetchFarmFromApi();
     }
 
@@ -127,6 +126,9 @@ public class AvailableFarmsActivity extends AppCompatActivity {
                 intent.putExtra("available_farm_card_id", availableFarmsList.get(position).get_id());
                 intent.putExtra("available_farm_card_title", availableFarmsList.get(position).getFarmName());
                 intent.putExtra("available_farm_card_image_url", availableFarmsList.get(position).getFarmImageUrl());
+                intent.putExtra("available_farm_card_roi", availableFarmsList.get(position).getFarmROI());
+                intent.putExtra("available_farm_card_amount", availableFarmsList.get(position).getFarmAmount());
+                intent.putExtra("available_farm_card_description", availableFarmsList.get(position).getFarmDescription());
                 //Toast.makeText(AvailableFarmsActivity.this, availableFarmsList.get(position).getFarmImageUri(), Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

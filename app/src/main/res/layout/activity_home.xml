@@ -152,25 +152,7 @@
                 android:text="0" />
 
 
-            <TextView
-                android:id="@+id/text_view_next_end_of_cycle_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Next End Of Cycle:"
-                android:textColor="@android:color/black"
-                android:layout_below="@id/text_view_expected_returns_label"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"/>
 
-            <TextView
-                android:id="@+id/text_view_next_end_of_cycle_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_view_expect_returns_count"
-                android:layout_alignEnd="@id/text_view_next_end_of_cycle_label"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="-50dp"
-                android:text="0" />
 
 
         </RelativeLayout>
@@ -186,10 +168,12 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
+        android:elevation="10dp"
+
 
         android:text="Find Farms"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/rounded_corner_button_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
@@ -222,7 +206,7 @@
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="@dimen/cardview_default_elevation">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="100dp"
@@ -259,7 +243,7 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="20dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="@dimen/cardview_default_elevation">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="100dp"
@@ -314,7 +298,7 @@
             android:layout_marginRight="20dp"
             android:gravity="center"
             app:cardCornerRadius="10dp"
-            app:cardElevation="@dimen/cardview_default_elevation">
+            app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="100dp"
@@ -351,7 +335,7 @@
             android:layout_height="120dp"
             android:layout_marginLeft="20dp"
             app:cardCornerRadius="10dp"
-            app:cardElevation="@dimen/cardview_default_elevation">
+            app:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="100dp"

@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        fetchUserProfile();
+      //  fetchUserProfile();
     }
 
     private void fetchUserProfile() {

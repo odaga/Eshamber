@@ -1,13 +1,11 @@
 package com.ugtechie.eshamber.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.os.Handler;
 
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.ugtechie.eshamber.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,16 +15,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
         Button getStartedButton = findViewById(R.id.button_get_started);
-
         getStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
+
+        */
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this,
+                        LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }, 2000);
     }
 
+    /*
     @Override
     protected void onStart() {
         super.onStart();
@@ -37,4 +48,5 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
+    */
 }

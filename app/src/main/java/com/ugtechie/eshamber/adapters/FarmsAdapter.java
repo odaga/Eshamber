@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -65,7 +64,6 @@ public class FarmsAdapter extends RecyclerView.Adapter<FarmsAdapter.viewHolder> 
                     }
                 }
             });
-
         }
     }
 
@@ -88,23 +86,20 @@ public class FarmsAdapter extends RecyclerView.Adapter<FarmsAdapter.viewHolder> 
         try {
             holder.textViewFarmTitle.setText(availableFarms.getFarmName());
             //holder.textViewFarmAmount.setText(availableFarms.getFarmAmount());
-            holder.textViewFarmAmount.setText("UGX "+decim.format(Integer.parseInt(availableFarms.getFarmAmount())));
-            holder.textViewFarmRoi.setText(availableFarms.getFarmROI() +"%");
+            holder.textViewFarmAmount.setText("UGX " + decim.format(Integer.parseInt(availableFarms.getFarmAmount())));
+            holder.textViewFarmRoi.setText(availableFarms.getFarmROI() + "%");
             // holder.textViewFarmDuration.setText(availableFarms.getDuration());
+        } catch (Exception e) {
+            Log.d(TAG, "onBindViewHolder: " + e.getMessage());
         }
-        catch (Exception e) {
-            Log.d(TAG, "onBindViewHolder: " +e.getMessage());
-        }
-
 
         try {
             if (availableFarms.getFarmImageUrl().isEmpty())
                 holder.imageViewCardFarmImage.setImageResource(R.drawable.farm_image_placeholder);
             else
                 Picasso.get().load(Uri.parse(availableFarms.getFarmImageUrl())).into(holder.imageViewCardFarmImage);
-        }
-        catch (Exception e) {
-            Log.d(TAG, "onBindViewHolder: " +e.getMessage());
+        } catch (Exception e) {
+            Log.d(TAG, "onBindViewHolder: " + e.getMessage());
             holder.imageViewCardFarmImage.setImageResource(R.drawable.farm_image_placeholder);
         }
     }
